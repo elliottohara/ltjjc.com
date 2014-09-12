@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+    <img class="imgl" src="{% static "img/staff/bio/" %}{{member.url}}.jpg" alt="{{ member.name }} BJJ Instructor" width="250px" />
+    <h1>{{ member.name }}</h1>
+    <a href="{% url 'staff' %}">back to staff list</a>
+    <p>{{ member.bio }}</p>
+{% endblock %}

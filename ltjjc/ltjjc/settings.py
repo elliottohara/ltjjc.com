@@ -81,6 +81,8 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATICFILES_DIRS = (
     PROJECT_ROOT + '/static/',
 )
+MEDIA_ROOT = BASE_DIR + '/media/'
+MEDIA_URL = '/media/'
 
 STATIC_URL = '/static/'
 
@@ -101,6 +103,13 @@ DATABASES = {
         'PORT': '3306',
     }
 }
+
+
+#DEFAULT_FILE_STORAGE = 'libs.storages.S3Storage.S3Storage'
+#AWS_STORAGE_BUCKET_NAME = 'ltjjc.com'
+#AWS_ACCESS_KEY_ID = 'AKIAJ3HFXZGXB7BFTCOA'
+#AWS_SECRET_ACCESS_KEY = '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'
+
 
 if os.environ.get('DEVELOPMENT', None):
     from settings_dev import *

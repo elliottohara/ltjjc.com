@@ -1,6 +1,9 @@
 from django.conf.urls import patterns, include, url
 
 from django.contrib import admin
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.templatetags.static import static
+import ltjjc
 import website
 
 admin.autodiscover()
@@ -21,3 +24,6 @@ urlpatterns = patterns('',
     url(r'^children$', 'website.views.children', name='children')
 
 )
+urlpatterns += staticfiles_urlpatterns()
+urlpatterns += patterns('', (r'^media/(?P<path>.*)$', 'django.views.static.serve',
+                             {'document_root': ltjjc.settings.MEDIA_ROOT}))

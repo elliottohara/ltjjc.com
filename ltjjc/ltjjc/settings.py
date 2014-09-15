@@ -111,5 +111,5 @@ DATABASES = {
 #AWS_SECRET_ACCESS_KEY = 'Rb0lyoq92pcLfdaQUpPXVKqn/ND0CDpbRCHB+cRs'
 
 
-#if os.environ.get('DEVELOPMENT', None):
-#    from settings_dev import *
+if os.environ.get('DEVELOPMENT', None):
+    from settings_dev import *

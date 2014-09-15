@@ -1,5 +1,5 @@
 """
-Django settings for sbjj project.
+Django settings for ltjjc project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -111,5 +111,5 @@ DATABASES = {
 #AWS_SECRET_ACCESS_KEY = 'Rb0lyoq92pcLfdaQUpPXVKqn/ND0CDpbRCHB+cRs'
 
 
-if os.environ.get('DEVELOPMENT', None):
-    from settings_dev import *
+#if os.environ.get('DEVELOPMENT', None):
+#    from settings_dev import *
